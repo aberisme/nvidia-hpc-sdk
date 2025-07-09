@@ -23,11 +23,25 @@ You will also have the NVIDIA App and NVIDIA Control Panel if you installed it p
 
 ![nvidia-apps](https://github.com/user-attachments/assets/725d290f-63cb-4a47-b0ef-5cf6859e3082)
 
+<h3>3.	Install CUDA Toolkit for Windows from NVIDIA</h3>
+Go to NVIDIA website and download the CUDA Toolkit for Windows (https://developer.nvidia.com/cuda-downloads). Make sure to select proper OS, architecture, version, installer type.
 
+![cuda-toolkit](https://github.com/user-attachments/assets/e5607da5-edb0-472b-8c89-478e2b86a714)
 
+<h3>4. Update WSL distro</h3>
+Open the WSL (i.e. Ubuntu) you installed from the MS Store and update distro package and versions using the commands:
 
+```
+$  sudo apt update
+$  sudo apt upgrade
+```
 
+<h3>5. Install CUDA Toolkit for Ubuntu </h3>
+In your WSL, install CUDA Toolkit for Ubuntu distro using the command:
 
+```
+$  sudo apt install nvidia-cuda-toolkit
+```
 
 ```
 $  curl https://developer.download.nvidia.com/hpc-sdk/ubuntu/DEB-GPG-KEY-NVIDIA-HPC-SDK | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg
