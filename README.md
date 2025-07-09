@@ -43,6 +43,61 @@ In your WSL, install CUDA Toolkit for Ubuntu distro using the command:
 $  sudo apt install nvidia-cuda-toolkit
 ```
 
+<h3>6. Install NVIDIA HPC SDK</h3>
+Go to NVIDIA HPC SDK download site (https://developer.nvidia.com/hpc-sdk-downloads) and choose Linux x86_64 Ubuntu(apt). Run the given commands.
+
+![nvidia-hpc](https://github.com/user-attachments/assets/9c4c02e7-4681-411b-baea-44b61b264040)
+Commands from the website:
 ```
 $  curl https://developer.download.nvidia.com/hpc-sdk/ubuntu/DEB-GPG-KEY-NVIDIA-HPC-SDK | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg
+$  echo 'deb [signed-by=/usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg] https://developer.download.nvidia.com/hpc-sdk/ubuntu/amd64 /' | sudo tee /etc/apt/sources.list.d/nvhpc.list
+$  sudo apt-get update -y
+$  sudo apt-get install -y nvhpc-25-5
 ```
+
+<h3>7. Verify your NVIDIA HPC SDK installation</h3>
+To verify NVIDIA HPC SDK installation, use the commad: <code>nvaccelinfo -v</code>
+For successful installation you get this output:
+
+![nvidia-hpc-sdk](https://github.com/user-attachments/assets/74c8788e-1edb-4057-aff5-cb1417306d61)
+
+If you got the message <code style='color:red'>command not found</code>  as shown below proceed with the following steps to path the SDK to environment.
+
+![not-found](https://github.com/user-attachments/assets/dac20c89-c424-49c3-8183-6bca1077379f)
+
+Add the following <code>export</code> to your bash:
+
+```
+sudo nano ~/.bashrc
+
+export LD_LIBRARY_PATH="/usr/lib/wsl/lib/"
+export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.5/compilers/bin:$PATH
+
+source ~/.bashrc
+```
+<b style = 'color:red'>• IMPORTANT:</b> Make sure to check the path first using <code>cd</code> and <code>ls</code> before <code>export</code>
+
+<h3>8. Verify NVIDIA Compiler</h3>
+To verify NVIDIA Compiler for C++, use the given command in your WSL terminal: <code>nvc++ --version</code>
+
+![nvcpp](https://github.com/user-attachments/assets/fbaae7f4-c6de-4b53-8b2e-c05ae5e40752)
+
+<h3>9. Compile your code</h3>
+You are now ready to go. Compiling commands below:
+Compile using g++
+
+```g++ [filename.cpp] -o [output-filename]```
+
+Compile using NVIDIA Compiler
+
+```nvc++ [filename.cpp] -o [output-filename]```
+
+Compile using NVIDIA Compiler with OpenAcc
+
+```nvc++ -acc=host [filename.cpp] -o [output-filename]```
+
+Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
+
+```nvc++ -acc=gpu -gpu=cc89 [filename.cpp] -o [output-filename]```
+
+
