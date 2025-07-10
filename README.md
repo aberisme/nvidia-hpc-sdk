@@ -86,19 +86,19 @@ To verify NVIDIA Compiler for C++, use the given command in your WSL terminal: <
 You are now ready to go. Compiling commands below:
 
 
-Compile using g++
+*Compile using g++
 
 ```g++ [filename.cpp] -o [output-filename]```
 
-Compile using NVIDIA Compiler
+*Compile using NVIDIA Compiler
 
 ```nvc++ [filename.cpp] -o [output-filename]```
 
-Compile using NVIDIA Compiler with OpenAcc
+*Compile using NVIDIA Compiler with OpenAcc
 
 ```nvc++ -acc=host [filename.cpp] -o [output-filename]```
 
-Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
+*Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
 
 ```nvc++ -acc=gpu -gpu=cc89 [filename.cpp] -o [output-filename]```
 
