@@ -85,6 +85,7 @@ To verify NVIDIA Compiler for C++, use the given command in your WSL terminal: <
 <h3>9. Compile your code</h3>
 You are now ready to go. Compiling commands below:
 <br/>
+<br/>
 
 Compile using g++
 
