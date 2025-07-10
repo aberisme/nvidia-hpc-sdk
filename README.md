@@ -102,4 +102,5 @@ Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
 
 ---
 <h3>Link to video tutorial below:</h3>
+
 [![NVIDIA HPC SDK](https://img.youtube.com/vi/GEjm7NKiY70/0.jpg)](https://youtu.be/GEjm7NKiY70)
