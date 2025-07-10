@@ -1,5 +1,4 @@
 # How to install NVIDIA HPC SDK on Windows using WSL
-Link to video tutorial [![NVIDIA HPC SDK](https://img.youtube.com/vi/GEjm7NKiY70/0.jpg)](https://youtu.be/GEjm7NKiY70)
 
 <h3>1. Install Ubuntu WSL distro</h3>
 Open Microsoft Store and look for Ubuntu and install
@@ -102,3 +101,6 @@ Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
 ```nvc++ -acc=gpu -gpu=cc89 [filename.cpp] -o [output-filename]```
 
 
+<h3>Link to video tutorial below:</h3>
+
+[![NVIDIA HPC SDK](https://img.youtube.com/vi/GEjm7NKiY70/0.jpg)](https://youtu.be/GEjm7NKiY70)
