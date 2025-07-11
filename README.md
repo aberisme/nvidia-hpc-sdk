@@ -111,8 +111,9 @@ Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
 ---
 <h3>Code Demo using OpenACC</h3>
 
-. nvidia-hpc-sdk (repo branches)
+Repository branches, you may clone this repo using <code> git clone https://github.com/aberisme/nvidia-hpc-sdk.git</code>
 ```
+. nvidia-hpc-sdk
 ├── main
 │   └── README.md
 ├── normal (uses sequential or tradition code)
@@ -128,6 +129,7 @@ Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
     ├── hpc_demo.cpp → gpu acceleration code version
     └── demo_parallel
 ```
+Video on the coding demo
 
 [![Code Demo](https://img.youtube.com/vi/qjM0iAXtqFQ/0.jpg)](https://youtu.be/qjM0iAXtqFQ)
 
