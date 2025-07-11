@@ -135,11 +135,11 @@ Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
 <br/>
 └── parallel (uses parallelism in gpu)
 <br/>
-    ├── README.md
+&nbsp; &nbsp; &nbsp;├── README.md
     <br/>
-    ├── hpc_demo.cpp → gpu acceleration code version
+&nbsp; &nbsp; &nbsp;├── hpc_demo.cpp → gpu acceleration code version
     <br/>
-    └── demo_parallel
+&nbsp; &nbsp; &nbsp;└── demo_parallel
 
 
 [![Code Demo](https://img.youtube.com/vi/qjM0iAXtqFQ/0.jpg)](https://youtu.be/qjM0iAXtqFQ)
