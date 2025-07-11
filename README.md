@@ -111,7 +111,7 @@ Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
 ---
 <h3>Code Demo using OpenACC</h3>
 
-Repository branches, you may clone this repo using <code> git clone https://github.com/aberisme/nvidia-hpc-sdk.git</code>
+Repository branches, you may clone this repo using  <code>git clone https://github.com/aberisme/nvidia-hpc-sdk.git</code>
 ```
 . nvidia-hpc-sdk
 ├── main
