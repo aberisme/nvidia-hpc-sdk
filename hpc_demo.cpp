@@ -18,11 +18,17 @@ int main() {
 
 	auto start = std::chrono::high_resolution_clock::now();
 	
-	#pragma acc kernels
-	for(int i = 0; i < 150000; i++) { // sum of pairs
+	#pragma acc data copyin(a, sumpair), copyout(sumpair)
+	{
+		#pragma acc parallel
+		{
+			#pragma acc loop independent
+			for(int i = 0; i < 150000; i++) { // sum of pairs
 					  
-		sumpair[i] = a[i*2] + a[(i*2)+1];
+				sumpair[i] = a[i*2] + a[(i*2)+1];
 
+			}
+		}
 	}
 
 	auto end = std::chrono::high_resolution_clock::now();
@@ -34,7 +40,7 @@ int main() {
 		sum2 += sumpair[i];
 	}
 	
-	cout << "Time Duration: " << duration_ns.count() << " ns --- [KERNEL] --- ";
+	cout << "Time Duration: " << duration_ns.count() << " ns --- [PARALLEL] --- ";
 	cout << "Ground Sum: " << sum << " ... Sum of Pairs: " << sum2 << endl;
 
 	return 0;
