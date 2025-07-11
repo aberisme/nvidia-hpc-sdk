@@ -112,35 +112,22 @@ Compile using NVIDIA Compiler with OpenAcc and dedicated GPU (e.g. cc89)
 <h3>Code Demo using OpenACC</h3>
 
 . nvidia-hpc-sdk (repo branches)
-<br/>
+```
 ├── main
-<br/>
-│    ├── README.md
-<br/>
+│   └── README.md
 ├── normal (uses sequential or tradition code)
-<br/>
-│    ├── README.md
-<br/>
-│    ├── hpc_demo.cpp → sequential code version
-<br/>
-│    └── demo_normal
-<br/>
+│   ├── README.md
+│   ├── hpc_demo.cpp → sequential code version
+│   └── demo_normal
 ├── kernel (uses openacc default acceleration)
-<br/>
-│    ├── README.md
-<br/>
-│    ├── hpc_demo.cpp → openacc code version
-<br/>
-│    └── demo_kernel
-<br/>
+│   ├── README.md
+│   ├── hpc_demo.cpp → openacc code version
+│   └── demo_kernel
 └── parallel (uses parallelism in gpu)
-<br/>
-&nbsp; &nbsp; &nbsp;├── README.md
-    <br/>
-&nbsp; &nbsp; &nbsp;├── hpc_demo.cpp → gpu acceleration code version
-    <br/>
-&nbsp; &nbsp; &nbsp;└── demo_parallel
-
+    ├── README.md
+    ├── hpc_demo.cpp → gpu acceleration code version
+    └── demo_parallel
+```
 
 [![Code Demo](https://img.youtube.com/vi/qjM0iAXtqFQ/0.jpg)](https://youtu.be/qjM0iAXtqFQ)
 
